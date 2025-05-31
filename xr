@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Immersive & AI Real Estate Market Trends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF;
+            color: #003A70;
+        }
+        .hero-bg {
+            background-color: #003A70;
+            color: #FFFFFF;
+        }
+        .section-title {
+            color: #003A70;
+            font-weight: 800;
+        }
+        .stat-card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #B2EDFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .stat-number {
+            color: #0072CE;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        .stat-label {
+            color: #00AEEF;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 380px;
+            padding: 1.5rem;
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+                max-height: 420px;
+            }
+        }
+        .flow-step {
+            background-color: #E0F2FE;
+            border-left: 4px solid #0072CE;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 0.75rem;
+        }
+        .flow-arrow {
+            color: #0072CE;
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin: 0.25rem 0;
+        }
+        .icon-placeholder {
+            font-size: 2.5rem;
+            color: #0072CE;
+            margin-bottom: 0.75rem;
+            line-height: 1;
+        }
+        .highlight-text {
+            color: #0072CE;
+            font-weight: 600;
+        }
+        .comparison-bar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .comparison-bar {
+            background-color: #B2EDFF;
+            height: 2rem;
+            border-radius: 0.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 0.5rem;
+            color: #003A70;
+            font-weight: 500;
+        }
+        .bar-today {
+            width: 90%;
+            background-color: #7FDBFF;
+        }
+        .bar-tomorrow {
+            width: 30%;
+            background-color: #00AEEF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="hero-bg py-16 sm:py-20 px-4 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">The PropTech Revolution: Immersion and AI at the Heart of Tomorrow's Real Estate</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto">
+                Dive into the transformations of the real estate sector, shaped by virtual tours, artificial intelligence, and immersive technologies.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 space-y-16 md:space-y-20">
+
+        <section id="proptech-overview">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">The Expanding PropTech Market</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Property Technology (PropTech) is redefining real estate. This dynamic sector merges technology and real estate to optimize transactions, management, and customer experience.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
+                <div class="stat-card text-center">
+                    <div class="stat-number text-5xl sm:text-6xl">97.33 <span class="text-3xl sm:text-4xl align-baseline">Bn$</span></div>
+                    <div class="stat-label">Global PropTech Market (2032 Projection)</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-5xl sm:text-6xl">11.9<span class="text-3xl sm:text-4xl align-baseline">%</span></div>
+                    <div class="stat-label">PropTech CAGR (2023-2032)</div>
+                </div>
+            </div>
+            <p class="mt-8 text-center text-gray-600 max-w-3xl mx-auto">
+                This growth is driven by a demand for greater efficiency, transparency, and enriched user experiences.
+            </p>
+        </section>
+
+        <section id="virtual-tours-focus">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">Virtual Tour Explosion</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Virtual tours have become an essential tool, propelling market growth to record levels.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl sm:text-5xl">8.89 <span class="text-2xl sm:text-3xl align-baseline">Bn$</span></div>
+                    <div class="stat-label">Virtual Tours Market (2023)</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl sm:text-5xl">127.47 <span class="text-2xl sm:text-3xl align-baseline">Bn$</span></div>
+                    <div class="stat-label">Virtual Tours Market (2032 Projection)</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl sm:text-5xl">34.49<span class="text-2xl sm:text-3xl align-baseline">%</span></div>
+                    <div class="stat-label">Virtual Tours CAGR (2024-2032)</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="virtualToursMarketGrowthChart"></canvas>
+            </div>
+            <p class="mt-8 text-center text-gray-600 max-w-3xl mx-auto">
+                This chart illustrates the exponential growth trajectory of the virtual tours market, driven by the adoption of immersive technologies (AR/VR) and the demand for realistic digital experiences.
+            </p>
+        </section>
+
+        <section id="ai-impact">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">AI: A Catalyst for Transformation</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Artificial Intelligence is no longer just a trend, but a fundamental value driver for the real estate sector.</p>
+            </div>
+            <div class="stat-card text-center max-w-md mx-auto mb-10 md:mb-12">
+                <div class="stat-number text-5xl sm:text-6xl">110-180 <span class="text-3xl sm:text-4xl align-baseline">Bn$</span></div>
+                <div class="stat-label">Potential annual value of AI for real estate</div>
+            </div>
+            <h3 class="text-2xl font-semibold text-center mb-6" style="color:#0072CE;">Key AI Applications:</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <div class="stat-card p-4 items-start text-left">
+                    <div class="icon-placeholder self-center">🎨</div>
+                    <h4 class="text-lg font-semibold mb-1 self-center" style="color:#003A70;">Generative Design & Virtual Staging</h4>
+                    <p class="text-sm text-gray-600">Creation of optimized plans, virtual furnishing and decoration of spaces in a photorealistic manner.</p>
+                </div>
+                <div class="stat-card p-4 items-start text-left">
+                    <div class="icon-placeholder self-center">🤖</div>
+                    <h4 class="text-lg font-semibold mb-1 self-center" style="color:#003A70;">Process Automation</h4>
+                    <p class="text-sm text-gray-600">2D to 3D plan conversion, zoning compliance analysis, conversational assistants.</p>
+                </div>
+                <div class="stat-card p-4 items-start text-left">
+                    <div class="icon-placeholder self-center">📊</div>
+                    <h4 class="text-lg font-semibold mb-1 self-center" style="color:#003A70;">Predictive Analytics & Personalization</h4>
+                    <p class="text-sm text-gray-600">Price optimization, tailored recommendations, market trend anticipation.</p>
+                </div>
+            </div>
+             <p class="mt-8 text-center text-gray-600 max-w-3xl mx-auto">AI optimizes every stage of the real estate lifecycle, from design to sales, and management.</p>
+        </section>
+        
+        <section id="market-needs">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">Meeting Market Needs</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Immersive technologies and AI address critical pain points for both professionals and buyers.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="stat-card p-6">
+                    <h3 class="text-xl font-semibold mb-3" style="color:#0072CE;">For Agents & Developers:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
+                        <li><span class="highlight-text">Time and efficiency gains:</span> Automation of tour creation, reduction of unnecessary physical visits.</li>
+                        <li><span class="highlight-text">Cost reduction:</span> Lower physical staging costs, optimized marketing.</li>
+                        <li><span class="highlight-text">Expanded reach:</span> Access to local and international buyers 24/7.</li>
+                        <li><span class="highlight-text">Personalization tools:</span> Better meet specific client expectations.</li>
+                    </ul>
+                </div>
+                <div class="stat-card p-6">
+                    <h3 class="text-xl font-semibold mb-3" style="color:#0072CE;">For Buyers & Renters:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
+                        <li><span class="highlight-text">Immersion and visualization:</span> Better visualize and "feel" a space before visiting.</li>
+                        <li><span class="highlight-text">Personalization:</span> Virtually adapt a property to their tastes (decoration, layout).</li>
+                        <li><span class="highlight-text">Accessibility and convenience:</span> Visit many properties from home, at their own pace.</li>
+                        <li><span class="highlight-text">Increased confidence:</span> More transparent and detailed information for better decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-technologies">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">InOut Properties' Key Technologies</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Our approach relies on innovative technological processes to create unique real estate experiences.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-center" style="color:#0072CE;">From Design (CAD) to Virtual Reality (VR)</h3>
+                    <div class="space-y-2">
+                        <div class="flow-step"><span class="font-medium">1. CAD File (DWG/OBJ):</span> The initial architectural plan.</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">2. AI Processing:</span> Semantic interpretation and 3D model conversion.</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">3. 3D Optimization:</span> Preparation for web and VR (GLTF/USDZ).</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">4. WebVR/WebGL Experience:</span> Immersive tour accessible on all devices.</div>
+                    </div>
+                     <p class="text-sm text-gray-600 mt-4 text-center">This automated process simplifies the creation of virtual tours for off-plan properties.</p>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold mb-4 text-center" style="color:#0072CE;">Digitizing Existing Properties: Photogrammetry</h3>
+                    <div class="space-y-2">
+                        <div class="flow-step"><span class="font-medium">1. Image Capture:</span> Photos/scans (smartphones, drones, Matterport).</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">2. 3D Reconstruction:</span> Specialized software creates a point cloud/mesh.</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">3. Post-Processing:</span> Cleaning, mesh and texture optimization.</div>
+                        <div class="text-center flow-arrow">↓</div>
+                        <div class="flow-step"><span class="font-medium">4. Web/VR "Digital Twin":</span> Interactive 3D model of the existing property.</div>
+                    </div>
+                     <p class="text-sm text-gray-600 mt-4 text-center">This method allows for the creation of faithful virtual replicas of already built properties.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="3d-creation-cost">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold section-title">Cost of Immersive 3D Creation</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">Estimate for a 100-unit building (building, floors, individual units) for WebVR/WebGL.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="stat-card p-6">
+                    <h3 class="text-xl font-semibold mb-3" style="color:#0072CE;">Today (Manual/Semi-Automated Process)</h3>
+                    <p class="text-gray-700 mb-2 text-2xl font-bold">€25,000 - €80,000</p>
+                    <p class="text-sm text-gray-600">Cost varies depending on detail level, complexity, and service providers.</p>
+                    <div class="comparison-bar-container w-full mt-auto">
+                        <div class="comparison-bar bar-today">Relatively High Cost</div>
+                    </div>
+                </div>
+                <div class="stat-card p-6">
+                    <h3 class="text-xl font-semibold mb-3" style="color:#0072CE;">Tomorrow (Full AI Automation)</h3>
+                    <p class="text-gray-700 mb-2 text-2xl font-bold">€500 - €10,000 <span class="text-sm">(per project, post-AI R&D)</span></p>
+                    <p class="text-sm text-gray-600">Drastic reduction in unit costs after amortization of AI R&D investment.</p>
+                    <div class="comparison-bar-container w-full mt-auto">
+                         <div class="comparison-bar bar-tomorrow">Reduced Cost</div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-8 text-center text-gray-600 max-w-3xl mx-auto">AI-driven automation promises to democratize access to high-quality 3D experiences by significantly reducing production costs and timeframes.</p>
+        </section>
+
+
+        <section class="py-12 text-center bg-white rounded-lg shadow-xl mt-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold section-title mb-6">An Immersive and Intelligent Future for Real Estate</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                    The convergence of immersive technologies and artificial intelligence is shaping a new era for real estate. InOut Properties is committed to being at the forefront of this transformation, offering solutions that enhance efficiency, enrich the customer experience, and open new growth opportunities for the entire sector.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-16 py-10 text-center" style="background-color: #003A70; color: #E0F2FE;">
+        <p class="text-sm">&copy; <span id="currentYear"></span> InOut Properties - Strategic Infographic. Data based on internal research reports.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        function formatChartJsLabel(str, maxWidth = 16) {
+            if (typeof str !== 'string' || str.length <= maxWidth) return str;
+            
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if (currentLine.length === 0) {
+                    currentLine = word;
+                } else if ((currentLine + ' ' + word).length <= maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines.length > 1 ? lines : (lines[0] || str); 
+        }
+        
+        const virtualToursMarketCtx = document.getElementById('virtualToursMarketGrowthChart');
+        if (virtualToursMarketCtx) {
+            new Chart(virtualToursMarketCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2023', '2025', '2027', '2029', '2032'].map(year => formatChartJsLabel(year)),
+                    datasets: [{
+                        label: formatChartJsLabel('Virtual Tours Market (Bn$)'),
+                        data: [8.89, 24.58, 50.12, 85.78, 127.47],
+                        borderColor: '#0072CE', 
+                        backgroundColor: 'rgba(0, 114, 206, 0.2)', 
+                        borderWidth: 3,
+                        pointBackgroundColor: '#003A70',
+                        pointBorderColor: '#FFFFFF',
+                        pointHoverBackgroundColor: '#FFFFFF',
+                        pointHoverBorderColor: '#003A70',
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: formatChartJsLabel('Billion USD (Bn$)'),
+                                font: { size: 14, weight: '600' },
+                                color: '#003A70'
+                            },
+                            grid: { color: 'rgba(0, 58, 112, 0.1)' },
+                            ticks: {
+                                color: '#003A70',
+                                callback: function(value) { return value + ' Bn$'; }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: formatChartJsLabel('Year'),
+                                font: { size: 14, weight: '600' },
+                                color: '#003A70'
+                            },
+                            grid: { display: false },
+                            ticks: { color: '#003A70' }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            backgroundColor: '#003A70',
+                            titleColor: '#FFFFFF',
+                            bodyColor: '#B2EDFF',
+                            titleFont: { weight: 'bold', size: 14 },
+                            bodyFont: { size: 12 },
+                            padding: 12,
+                            cornerRadius: 6,
+                            displayColors: false,
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    }
+                                    return label;
+                                },
+                                label: function(context) {
+                                    let datasetLabel = context.dataset.label || '';
+                                     if (Array.isArray(datasetLabel)) { 
+                                        datasetLabel = datasetLabel.join(' ');
+                                    }
+                                    let valueLabel = '';
+                                    if (context.parsed.y !== null) {
+                                        valueLabel = context.parsed.y.toFixed(2) + ' Bn$';
+                                    }
+                                    return 'Value: ' + valueLabel;
+                                }
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                color: '#003A70',
+                                font: { size: 12 },
+                                padding: 15,
+                                usePointStyle: true,
+                                pointStyle: 'rectRounded',
+                                generateLabels: function(chart) {
+                                    const original = Chart.defaults.plugins.legend.labels.generateLabels;
+                                    const labels = original.call(this, chart);
+                                    labels.forEach(label => {
+                                        if (Array.isArray(label.text)) {
+                                           label.text = label.text.join(' ');
+                                        } else {
+                                           const formatted = formatChartJsLabel(label.text, 25);
+                                           label.text = Array.isArray(formatted) ? formatted.join(' ') : formatted;
+                                        }
+                                    });
+                                    return labels;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
